@@ -1,20 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import TodoForm from './components/TodoForm';
+import TodoPage from './components/TodoPage';
 
-function App() {
-  const [todos, setTodos] = useState<Array<Todo>>([]);
-
-  const addTodo: AddTodo = newTodo => {
-    if (newTodo !== '') {
-      setTodos([...todos, {text: newTodo, complete: false}])
-    }
-  }
+const App = () => {
 
   return (
     <div className="App">
-      <h1>Todo App</h1>
-      <TodoForm addTodo={addTodo}/>
+      <TodoPage />
     </div>
   );
 }

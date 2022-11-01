@@ -1,8 +1,7 @@
 type AddTodo = (newTodo: string) => void;
 
-type Todo = {
-    text: string;
-    complete: boolean;
+interface ITodo {
+    id: number;
+    title: string;
+    completed: boolean;
 }
-
-type ToggleComplete = (selectedTodo: Todo) => void;
